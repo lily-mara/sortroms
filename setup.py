@@ -7,6 +7,6 @@ setup(
 	author='Nate Mara',
 	author_email='natemara@gmail.com',
 	license='MIT',
-	packages=['sortroms'],
+	packages=['sortrom'],
 	zip_safe=False
 )
