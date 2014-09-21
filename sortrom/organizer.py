@@ -3,7 +3,7 @@ import json
 import glob
 import shutil
 
-from utils import get_data_file
+from .utils import get_data_file
 
 cd = os.chdir
 pwd = os.getcwd
