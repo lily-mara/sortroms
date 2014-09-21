@@ -49,12 +49,12 @@ def build_country(country, country_code):
 
 
 def get_tags():
-	tag_string = pkgutil.get_data('sortroms', 'tags.json').decode()
+	tag_string = pkgutil.get_data('sortroms.data', 'tags.json').decode()
 	return json.loads(tag_string)
 
 
 def get_folders():
-	folder_string = pkgutil.get_data('sortroms', 'folders.json').decode()
+	folder_string = pkgutil.get_data('sortroms.data', 'folders.json').decode()
 	return json.loads(folder_string)
 
 
