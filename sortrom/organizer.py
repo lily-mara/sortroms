@@ -3,6 +3,8 @@ import json
 import glob
 import shutil
 
+from utils import get_data_file
+
 cd = os.chdir
 pwd = os.getcwd
 
@@ -48,12 +50,12 @@ def build_country(country, country_code):
 
 
 def get_tags():
-	with open('tags.json', 'r') as jsonfile:
+	with open(get_data_file('tags.json'), 'r') as jsonfile:
 		return json.load(jsonfile)
 
 
 def get_folders():
-	with open('folders.json', 'r') as jsonfile:
+	with open(get_data_file('folders.json'), 'r') as jsonfile:
 		return json.load(jsonfile)
 
 
