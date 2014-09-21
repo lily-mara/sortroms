@@ -2,8 +2,7 @@ import os
 import json
 import glob
 import shutil
-
-from .utils import get_data_file
+import pkgutil
 
 cd = os.chdir
 pwd = os.getcwd
@@ -50,13 +49,13 @@ def build_country(country, country_code):
 
 
 def get_tags():
-	with open(get_data_file('tags.json'), 'r') as jsonfile:
-		return json.load(jsonfile)
+	tag_string = pkgutil.get_data('sortrom', 'tags.json').decode()
+	return json.loads(tag_string)
 
 
 def get_folders():
-	with open(get_data_file('folders.json'), 'r') as jsonfile:
-		return json.load(jsonfile)
+	folder_string = pkgutil.get_data('sortrom', 'folders.json').decode()
+	return json.loads(folder_string)
 
 
 def org_by_tags(tags):
