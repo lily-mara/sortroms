@@ -9,5 +9,6 @@ setup(
 	license='MIT',
 	packages=['sortroms'],
 	package_data={'sortroms.data': ['*.json']},
+	include_package_data=True,
 	zip_safe=False
 )
