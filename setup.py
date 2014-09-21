@@ -7,8 +7,8 @@ setup(
 	author='Nate Mara',
 	author_email='natemara@gmail.com',
 	license='MIT',
-	packages=['sortrom'],
-	package_dir={'sortrom': 'sortrom'},
-	package_data={'sortrom': ['sortrom/*.json']},
+	packages=['sortroms'],
+	package_dir={'sortroms': 'sortroms'},
+	package_data={'sortroms': ['sortroms/*.json']},
 	zip_safe=False
 )

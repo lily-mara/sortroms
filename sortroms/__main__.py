@@ -1,4 +1,4 @@
-from sortrom import main
+from sortroms import main
 
 if __name__ == '__main__':
 	main()

@@ -1,2 +1,2 @@
-recursive-include sortrom *.json
+recursive-include sortroms *.json
 include LICENSE
