@@ -8,5 +8,6 @@ setup(
 	author_email='natemara@gmail.com',
 	license='MIT',
 	packages=['sortrom'],
+	package_data={'': ['sortrom/*.json']},
 	zip_safe=False
 )
