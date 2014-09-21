@@ -10,5 +10,10 @@ setup(
 	packages=['sortroms'],
 	package_data={'sortroms.data': ['*.json']},
 	include_package_data=True,
+	entry_points={
+		"console_scripts": [
+			"sortroms=sortroms:main"
+		],
+	},
 	zip_safe=False
 )
