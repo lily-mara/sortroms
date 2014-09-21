@@ -22,6 +22,12 @@ def main():
 
 
 def filter_games(filter_by, folder_name=None):
+	'''
+	Finds all files matching filter_by, and moves them into a folder
+	called folder_name. Returns the number of files moved. If no files
+	match pattern, no folder is created.
+	'''
+
 	games = glob.glob(filter_by)
 	if len(games) == 0:
 		return 0
@@ -35,6 +41,13 @@ def filter_games(filter_by, folder_name=None):
 
 
 def build_country(country, country_code):
+	'''
+	Takes one country and one country code as arguments, moves all
+	files with tags in the format "*(%)*" where "%" is the country
+	code to the folder with the given name of the country. Also
+	creates an "official" subfolder containing all official releases.
+	'''
+
 	official = '{0} Official'.format(country)
 
 	official_games = 0
@@ -50,16 +63,36 @@ def build_country(country, country_code):
 
 
 def get_tags():
+	'''
+	Returns a dict object holding all of the country names and tags in
+	the format.
+
+	{
+		'Country Code': 'Country', ...
+	}
+
+	'''
+
 	tag_string = get_datafile('tags.json')
 	return json.loads(tag_string)
 
 
 def get_folders():
+	'''
+	Returns a list of all of the folders that should be organized.
+	'''
+
 	folder_string = get_datafile('folders.json')
 	return json.loads(folder_string)
 
 
 def org_by_tags(tags):
+	'''
+	For every country and country code in the given list of tags, put
+	the files matching the code into a folder called country. Prints
+	information about the number of files moved.
+	'''
+
 	for tag, country in tags.items():
 		country_stats = build_country(country, tag)
 		games = country_stats['games']
