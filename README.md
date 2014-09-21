@@ -1,4 +1,4 @@
 Sortroms
 ========
 
-Python package and command line utility for sorting emulator ROM files
+Python library and command line utility for sorting emulator ROM files
