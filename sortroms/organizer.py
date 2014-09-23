@@ -77,15 +77,6 @@ def get_tags():
 	return json.loads(tag_string)
 
 
-def get_folders():
-	'''
-	Returns a list of all of the folders that should be organized.
-	'''
-
-	folder_string = get_datafile('folders.json')
-	return json.loads(folder_string)
-
-
 def org_by_tags(tags):
 	'''
 	For every country and country code in the given list of tags, put
