@@ -1,7 +1,7 @@
 from setuptools import setup
 setup(
 	name='sortroms',
-	version='1.2.1',
+	version='1.2.2',
 	description='Python package for sorting emulator ROM files',
 	url='http://github.com/natemara/sortroms',
 	author='Nate Mara',
