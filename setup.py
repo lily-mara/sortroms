@@ -12,7 +12,7 @@ setup(
 	include_package_data=True,
 	entry_points={
 		"console_scripts": [
-			"sortroms=sortroms:main"
+			"sortroms=sortroms:command_line_entrypoint"
 		],
 	},
 	zip_safe=False
