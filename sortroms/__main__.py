@@ -11,7 +11,7 @@ parser.add_argument(
 	metavar='DIR',
 	type=str,
 	nargs='*',
-	help='The ROM folders to sort.'
+	help='The ROM folders to sort (absolute)'
 )
 
 if __name__ == '__main__':
