@@ -7,11 +7,11 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument(
-	'folder',
+	'folders',
 	metavar='DIR',
 	type=str,
-	nargs='?',
-	help='The ROM folder to sort.'
+	nargs='*',
+	help='The ROM folders to sort.'
 )
 
 if __name__ == '__main__':
