@@ -9,9 +9,9 @@ cd = os.chdir
 pwd = os.getcwd
 
 
-def main():
+def main(args):
 	tags = get_tags()
-	folders = get_folders()
+	folders = args.folders
 
 	for folder in folders:
 		input('Press ENTER to org "{}"...'.format(folder))
