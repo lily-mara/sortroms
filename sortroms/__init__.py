@@ -12,7 +12,6 @@ def command_line_entrypoint():
 	parser.add_argument(
 		'folders',
 		metavar='DIR',
-		type=str,
 		nargs='*',
 		help='The ROM folders to sort (absolute)'
 	)
